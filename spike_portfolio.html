@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ajay — Portfolio</title>
+  <meta name="description" content="Ajay — Engineering student & cybersecurity enthusiast. Resume, projects, skills, and contact in one single file." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#98a0b3;--accent:#6ee7b7;--accent2:#60a5fa;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071026 0%,#081025 40%,#06131a 100%);color:#e6eef6;line-height:1.45}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 40px rgba(2,6,23,0.6)}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:18px;flex:0 0 110px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;color:#051022;font-size:26px}
+    h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
+    .actions{margin-left:auto;display:flex;gap:10px}
+    .button{background:var(--glass);padding:10px 14px;border-radius:10px;color:var(--accent);border:1px solid rgba(255,255,255,0.03);cursor:pointer;font-weight:600}
+    .button.secondary{color:var(--accent2)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .about p{color:var(--muted);margin:10px 0}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:#dbeafe}
+
+    .list{display:grid;gap:10px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;flex-direction:column}
+    .project h4{margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:13px}
+
+    aside .mini{display:flex;align-items:center;gap:12px}
+    .mini .title{font-weight:700}
+    .timeline{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .timeline .item{padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){main{grid-template-columns:1fr;}
+      .actions{display:none}
+      .avatar{width:90px;height:90px}}
+
+    /* small UI touches */
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);display:inline-block}
+    .pill{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:12px}
+
+    .contact-form{display:grid;gap:8px}
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:inherit}
+    .small-muted{color:var(--muted);font-size:13px}
+
+    /* animated typing */
+    .typing{color:var(--accent);font-weight:700}
+
+    /* project badges */
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+
+    /* code block */
+    pre{background:#051226;padding:12px;border-radius:8px;overflow:auto;font-size:13px}
+
+    /* buttons */
+    .copy{font-size:13px;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="avatar">A</div>
+      <div>
+        <h1>Ajay — Engineering student & Cybersecurity enthusiast</h1>
+        <div class="subtitle">B.Tech (CSE) — 5th semester @ College of Engineering Thalassery · CGPA 6.9–7.2</div>
+        <div class="subtitle">Interests: Pentesting, Bug Bounty, Network Security, UI/UX, DevOps</div>
+      </div>
+
+      <div class="actions">
+        
+        <button class="button secondary" onclick="toggleTheme()">Toggle Theme</button>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card about">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+            <div>
+              <div class="tag">Ajay — call me Ajay</div>
+              <p style="margin-top:12px;">I'm Ajay — a hands-on engineering student (5th sem) from India. I focus on practical pentesting, bug bounty research, and building security-minded tools. I pair that with frontend UI/UX skills (Figma) and a bit of backend/DevOps knowledge through team projects. I'm blunt, direct, and I love practical challenges — not fluff.</p>
+              <p class="small-muted">Language preferences: Malayalam (I prefer 'nanni' for 'thank you').</p>
+            </div>
+            <div style="text-align:right;min-width:180px">
+              <div class="pill">Available: Internship & Mini project collaborator</div>
+              <div style="height:10px"></div>
+              <div class="small-muted">Current Doing: TryHackMe rooms, OWASP bootcamp, NPTEL Cybersecurity & Privacy, ISAC NCBBR & Bug Bounty course.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Skills</h3>
+          <div class="skills" style="margin-top:8px">
+            <span class="skill">Pentesting</span>
+            <span class="skill">Bug Bounty</span>
+            <span class="skill">Network Basics</span>
+            <span class="skill">Web Security (XSS, CSRF, CORS)</span>
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">Figma (UI/UX)</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Linux</span>
+            <span class="skill">RTF: TryHackMe</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Education & Certifications</h3>
+          <div class="list" style="margin-top:8px">
+            <div class="project">
+              <h4>B.Tech — Computer Science & Engineering</h4>
+              <div class="meta">College of Engineering Thalassery · Expected graduation: mid-2027 · Current semester: 5th</div>
+            </div>
+
+            <div class="project">
+              <h4>Certifications & Courses</h4>
+              <div class="meta">Google Career Certificate — Fundamentals of Cybersecurity · CS50 Introduction to Cybersecurity (final project pending) · ISAC NCBBR · ISAC Bug Bounty Researcher · IBM Pentester fundamentals · NPTEL Cybersecurity & Privacy</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Selected Projects & Hackathons</h3>
+          <div class="project">
+            <h4>Resume-checker (Hackathon project)</h4>
+            <div class="meta">Frontend: HTML/CSS · Backend: JavaScript · Uses DeepSeek API</div>
+            <p>Built as part of a college hackathon — checks resumes for ATS-friendly formatting, skills extraction, and provides quick suggestions.</p>
+            <div class="badges"><span class="tag">HTML</span><span class="tag">JS</span><span class="tag">API</span></div>
+          </div>
+
+          <div class="project" style="margin-top:10px">
+            <h4>Vuln-bank vulnerability report & analysis</h4>
+            <div class="meta">OSINT & web app pentest practice — Docker-based local deployment & exploit writeup.</div>
+            <p>Cloned and analyzed intentionally vulnerable app; produced a concise professional vulnerability report with reproduction steps.</p>
+          </div>
+
+          <div class="project" style="margin-top:10px">
+            <h4>TryHackMe Rooms & Capture-the-Flag</h4>
+            <div class="meta">Hands-on practice: intrusion detection, evasion techniques, and basic dependent rooms.</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Interests & Personal</h3>
+          <p class="small-muted">When I'm not breaking into things (ethically): I watch anime (One Piece, Berserk), play games (Valorant, Genshin, GTA Vice City, Detroit: Become Human — current favourite), and tinker with UI/UX prototypes in Figma. I like direct feedback — tell me if something sucks; I'll fix it.</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Public Profile Boilerplate </h3>
+          <pre id="readme">Subtitle
+🔭 I’m currently working on OwaspXMulearn Bootcamp
+
+🌱 I’m currently learning Cybersecurity methodologies & tools (Pentesting, Bug Bounty) ,
+        DevOps & Scalable Backend Deployment (Docker, Vercel, Railway) ,
+        Machine Learning basics for future cybersecurity applications ,
+        Japanese (as a side learning goal 🇯🇵)
+
+💬 Ask me about Pentesting & Bug Bounty basics ,Linux tools for security
+
+📫 How to reach me ajay9nambiar@gmail.com
+
+⚡ Fun fact I find more bugs in apps than in my room
+
+</pre>
+
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="mini">
+            <div>
+              <div class="title">Contact</div>
+              <div class="small-muted">Open to internships, mini-projects, and bug bounty collabs.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+            <div class="small-muted">Email</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <div>ajay9nambiar@gmail.com</div>
+              <button class="copy" onclick="copyText('ajay9nambiar@gmail.com')">Copy</button>
+            </div>
+
+            <div class="small-muted" style="margin-top:10px">Location</div>
+            <div>Kerala, India</div>
+
+            <div class="small-muted" style="margin-top:10px">Github</div>
+            <div style="display:flex;gap:8px;align-items:center">github.com/spikedbug69 <button class="copy" onclick="copyText('https://github.com/spikedbug69')">Copy</button></div>
+
+            <div class="small-muted" style="margin-top:10px">Resume</div>
+            <div><a href="#" onclick="alert('Drop your resume link or attach a file later')">Upload / Link</a></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Timeline</h4>
+          <div class="timeline">
+            <div class="item"><strong>Jun 2025 - Sep 2025</strong> — ISAC Bug Bounty course (ongoing)</div>
+            <div class="item"><strong>Jul 2025</strong> — NCBBR assignments & ISAC Falcon exam (expected early Sept)</div>
+            <div class="item"><strong>2025</strong> — Participated in National Cybersecurity Conclave at NIT Calicut</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Quick facts</h4>
+          <ul class="small-muted">
+            <li>Preferred pronoun: Ajay</li>
+            <li>Languages: English, Malayalam (preferred)</li>
+            <li>Gaming: Valorant, Genshin, RDR2 ideas</li>
+          </ul>
+        </div>
+
+
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>Built-for: Ajay · Honest, practical, no-bullshit portfolio</div>
+      <div class="small-muted">Tip: Say 'Hi gpt' for daily curated headlines (India, world, Kerala & tech) — per your preferences.</div>
+    </footer>
+  </div>
+
+  <script>
+    // small utilities
+    function fillBoilerplate(){const repo='github.com/spikedbug69';const txt=`Subtitle\nA passionate frontend developer from India\n\nWork\n🔭 I’m currently working on\nResume-checker (Hackathon) - ${repo}\n\n👯 I’m looking to collaborate on\nBug bounty research, pentesting projects - ${repo}\n\n🌱 I’m currently learning\nNetwork security, pentesting, OWASP, machine learning basics\n\n💬 Ask me about\ncybersecurity, pentesting, UI/UX, JavaScript\n\n📫 How to reach me\najay9nambiar@gmail.com\n\n👨‍💻`;
+      document.getElementById('readme').innerText=txt;navigator.clipboard.writeText(txt).then(()=>alert('Auto-filled and copied'))}
+
+    function sendMail(e){e.preventDefault();const f=new FormData(e.target);alert('Thanks '+f.get('name')+' — open your mail client to send or copy the message URL.');const body=encodeURIComponent(`Name: ${f.get('name')}\nEmail: ${f.get('email')}\n\n${f.get('message')}`);window.location.href=`mailto:ajay9nambiar@gmail.com?subject=Portfolio%20Contact&body=${body}`}
+    function mailtoMe(){window.location.href='mailto:ajay9nambiar@gmail.com'}
+
+    function toggleTheme(){document.body.classList.toggle('light');if(document.body.classList.contains('light')){document.documentElement.style.setProperty('--bg','#f7fafc');document.documentElement.style.setProperty('--card','#ffffff');document.documentElement.style.setProperty('--muted','#475569');document.documentElement.style.setProperty('--accent','#0ea5a0');document.documentElement.style.setProperty('--accent2','#3b82f6')}else{document.documentElement.style.removeProperty('--bg');document.documentElement.style.removeProperty('--card');document.documentElement.style.removeProperty('--muted');document.documentElement.style.removeProperty('--accent');document.documentElement.style.removeProperty('--accent2')}}
+
+    (function(){const tag=document.querySelector('.typing');if(!tag){const el=document.createElement('div');el.className='typing';el.style.marginTop='8px';el.innerText='Pentesting · Bug Bounty · UI/UX';document.querySelector('.subtitle').appendChild(el);}})();
+
+    // Pre-fill known info: prefer direct copy/paste edit by user later
+  </script>
+</body>
+</html>
